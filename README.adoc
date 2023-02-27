@@ -1,0 +1,23 @@
+= Homemade PKI
+
+Homemade PKI, server certificate, with intermediate authority, multi-SAN, with CRL and OCSP. 
+
+It is use for reverse-proxy tests purpose.
+
+This script has been done following this really good tutorial : https://jamielinux.com/docs/openssl-certificate-authority/introduction.html
+
+== How to generate server certificate
+
+- Modify the `config/defaut.ini` file to fit your personal informations.
+
+- Launch the script (you can precise all SAN as you need on parameters)
+
+```bash
+./scripts/generate_certificate.sh httpbin.localhost httpbin-2.localhost
+```
+
+== Cleaning
+
+```bash
+rm -rf pki/
+```
